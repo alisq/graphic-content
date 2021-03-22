@@ -69,6 +69,20 @@
     
 }
 
+.offset-reverse {
+    background:#FFF;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:calc(20vw + 8px);
+    box-shadow:0 0 0 4px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:10;
+    
+}
 .bio {
     background:#FFF;
     height:100%;
