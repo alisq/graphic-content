@@ -1,5 +1,5 @@
 
-@import "fonts";
+@import "typography";
 @import "structure";
   
 
@@ -10,15 +10,24 @@
     
 }
 
-body {
-    font-family:"Atlas Grotesk Web";    
+
+.bg {  
+    background-attachment: fixed;
+    background-size:cover;
+    
 }
 
+.bg1 { background-image:url('/assets/bgs/bg1.png') }
+.bg2 { background-image:url('/assets/bgs/bg2.png') }
+.bg3 { background-image:url('/assets/bgs/bg3.png') }
+.bg4 { background-image:url('/assets/bgs/bg4.png') }
+.bg5 { background-image:url('/assets/bgs/bg5.png') }
+.bg6 { background-image:url('/assets/bgs/bg6.png') }
 
 
 .sketch-container {
     overflow:hidden;
-    height:33vh;
+    // height:33vh;
     position:relative;
 }
 
@@ -69,35 +78,6 @@ body {
 }
 
 
-
-h1, h2, h4 {
-    font-family:'bluu';
-    font-size:100px;
-    font-weight:normal;
-
-}
-
-h4 {
-    font-size:5rem;
-}
-
-h5 {
-    font-size:5rem
-}
-
-h2 {
-    background:black;
-    width:100%;
-    height:100%;
-    color:white;
-    padding:1em;
-    opacity:0;
-    transition:all 0.2s
-}
-
-h2:hover {
-    opacity:1;
-}
 
 
 /* 
