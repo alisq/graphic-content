@@ -90,3 +90,41 @@
     opacity:0;
     transition:all 0.2s
 }
+
+@media (max-width:1000px) {
+    #grid { display:block }
+    .grid-item { 
+        display:block;
+        min-height:0;
+        padding:0.5rem;
+        height:auto;
+    }
+
+
+
+    .small-tall {
+        min-height:10vw
+    }
+    .horizontal-split, .vertical-split {
+        padding:0;
+        box-shadow:none;
+    }
+
+    .offset-container {
+        padding:2em;
+    }
+
+     .offset, .offset-reverse {
+        position: static;
+        box-shadow:none;
+     }
+     #session-1,
+     #session-2,
+     #session-3,
+     #session-4,
+     .hide-small {
+         display:none;
+     }
+}
+
+

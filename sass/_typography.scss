@@ -95,3 +95,27 @@ h1, h2, h3, h4 {
  p {
       padding:2rem;
  }
+
+
+ @media (max-width:1000px) {
+
+     #menu {
+          font-size:1rem
+     }
+
+     h1 {
+          font-size:8rem
+     }
+
+     h4 {
+          font-size:1.5rem;
+     }
+
+     p {
+          text-align:center
+     }
+
+     h4 br {
+          display:inline;
+     }
+ }

@@ -63,6 +63,18 @@ h5 {
 p {
   padding: 2rem; }
 
+@media (max-width: 1000px) {
+  #menu {
+    font-size: 1rem; }
+  h1 {
+    font-size: 8rem; }
+  h4 {
+    font-size: 1.5rem; }
+  p {
+    text-align: center; }
+  h4 br {
+    display: inline; } }
+
 #grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -149,6 +161,31 @@ p {
   width: 100%;
   opacity: 0;
   transition: all 0.2s; }
+
+@media (max-width: 1000px) {
+  #grid {
+    display: block; }
+  .grid-item {
+    display: block;
+    min-height: 0;
+    padding: 0.5rem;
+    height: auto; }
+  .small-tall {
+    min-height: 10vw; }
+  .horizontal-split, .vertical-split {
+    padding: 0;
+    box-shadow: none; }
+  .offset-container {
+    padding: 2em; }
+  .offset, .offset-reverse {
+    position: static;
+    box-shadow: none; }
+  #session-1,
+  #session-2,
+  #session-3,
+  #session-4,
+  .hide-small {
+    display: none; } }
 
 * {
   box-sizing: border-box;
