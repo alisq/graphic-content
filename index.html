@@ -209,8 +209,13 @@ California College of Art
             $("<div class='bio'></div>")
                 .html("<p>"+$(this).data("bio")+"</p>")
                 .appendTo( $(this).data("session") )
+                .css({"opacity":1})
             }, function() {
-            $( $(this).data("session") ).empty();
+                $(".bio").css({"opacity":0})
+                setTimeout(function(){
+                    $(".bio").remove();
+                },20)
+                
         }
             );
     </script>
