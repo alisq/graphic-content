@@ -210,7 +210,7 @@ California College of Art
                 and research assistance from Farah Michel. </h4>
         </div>
     <div class="grid-item bg bg3 small-tall"></div>
-    <div class="grid-item" id="contact">
+    <div class="grid-item" id="contact" style="text-align:center">
 
         <p>Please contact Jesse LeCavalier with questions or requests.
 
@@ -233,39 +233,7 @@ California College of Art
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.js"></script>
-    <script>
-        $("#menu a").click(function(e){
-            e.preventDefault();
-            destination = $(this).attr("href")
-            
-            fromTop = $(window).height()/10
-
-            $(document).scrollTo(destination,{
-                duration:400,
-                offset:{top:-fromTop}
-            })
-
-            setTimeout(function(){
-                window.location.hash=destination;
-            },200)
-        })
-
-
-        $(".name").hover(function(){
-            $(".bio").remove();
-            $("<div class='bio'></div>")
-                .html("<p>"+$(this).data("bio")+"</p>")
-                .appendTo( $(this).data("session") )
-                .css({"opacity":1})
-            })
-
-                
-        
-
-            $(document).on("mouseout",".bio",function(){
-                $(this).remove();
-            })
-    </script>
+    <script src="js/script.js"></script>
 
 
 </body>

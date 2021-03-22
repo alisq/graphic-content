@@ -1,79 +1,31 @@
-let w = window.document.getElementById('sketch1').clientWidth;
-let h = window.document.getElementById('sketch1').clientHeight;
-let offset = 20;
-let x = 1000;
-
-let sketch1 = function(p) {
-    p.setup = function(){
-      p.createCanvas(w, h);      
-    }
-
-    p.draw = function() {
-        p.background(255);
-
-        p.stroke('red');
-        p.strokeWeight(10);
-
-  p.push();
-  p.translate(w/2, h/2);
-  p.rotate( p.radians( p.frameCount * 0.5) );
-
-  for(let i = 0; i < w*5; i += offset){
-    p.line(i-x, -x, i-x, x);
-  }
-  p.pop();
-
-  p.push();
-  p.translate(w/2, h/2);
-  p.rotate( p.radians( p.frameCount * -0.25) );
-
-  for(let i = 0; i < w; i += offset){
-    p.line(i-x, -x, i-x, x);
-  }
-  p.pop();
-}
-    }
-
-
-
-
-    let sketch2 = function(p) {
-    p.setup = function(){
-        p.createCanvas(w, h);      
-      }
+$("#menu a").click(function(e){
+  e.preventDefault();
+  destination = $(this).attr("href")
   
-      p.draw = function() {
-          p.background(255);
-  
-          p.stroke('red');
-          p.strokeWeight(10);
-  
-    //p.push();
-    //p.translate(w/2, h/2);
-    //p.rotate( p.radians( p.frameCount * 0.5) );
-  
-    for(let i = 0; i < w*5; i += offset){
-      p.line(i-x, -x, i-x, x);
-    }
-    //p.pop();
-  
-    p.push();
-    p.translate(800+(p.frameCount * +0.25), 0);
-    //p.rotate( p.radians( p.frameCount * -0.25) );
-  
-    for(let i = 0; i < w; i += offset){
+  fromTop = $(window).height()/10
+
+  $(document).scrollTo(destination,{
+      duration:400,
+      offset:{top:-fromTop}
+  })
+
+  setTimeout(function(){
+      window.location.hash=destination;
+  },200)
+})
+
+
+$(".name").hover(function(){
+  $(".bio").remove();
+  $("<div class='bio'></div>")
+      .html("<p>"+$(this).data("bio")+"</p>")
+      .appendTo( $(this).data("session") )
+      .css({"opacity":1})
+  })
+
       
-        p.line(i-x, -x, i-x+200, x);
-    }
-    p.pop();
-  }
-      }
-  
-
-  new p5(sketch1, window.document.getElementById('sketch1'));
-  new p5(sketch2, window.document.getElementById('sketch2'));
-
-  
 
 
-  
+  $(document).on("mouseout",".bio",function(){
+      $(this).remove();
+  })
