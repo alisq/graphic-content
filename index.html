@@ -12,11 +12,13 @@
 </head>
 <body>
 
+    <div id="frame"></div>
+
     <div id="grid">
         
         <div class="grid-item grid-span-2-start vertical-split">           
-            <div class="grid-item">
-                
+            <div class="grid-item" id="menu">
+                <a href="#about">about</a> &nbsp;&mdash;&nbsp; sessions: &nbsp;<a href="#poltical_economies">political economies</a>,&nbsp;&nbsp;<a href="#agencies">agencies</a>,&nbsp;&nbsp;<a href="#heuristics">heuristics</a>,&nbsp;&nbsp;<a href="#geographies">geographies</a> &nbsp;&mdash;&nbsp; <a href="#contact">contact</a>
             </div>
             <div class="grid-item bg bg3">
                 
@@ -90,7 +92,7 @@
 
         </div>
 
-        <div class="grid-item">
+        <div class="grid-item" id="poltical_economies">
             <p>
             session 1: <strong>POLITICAL ECONOMIES</strong><br />
 Friday, March 26, 12:00–14:00 EST (ZOOM)<br />
@@ -107,7 +109,7 @@ Daniels Faculty, University of Toronto
 
         </div>
         <div class="grid-item grid-height-2 bg bg2"></div>
-        <div class="grid-item">
+        <div class="grid-item" id="agencies">
             <p>
             session 2: <strong>AGENCIES</strong><br />
 Friday, March 26, 15:00–17:00 EST (ZOOM)<br />
@@ -123,7 +125,7 @@ University of Melbourne
 </p>
         </div>
         <div class="grid-item grid-height-2 bg bg6"></div>
-        <div class="grid-item">
+        <div class="grid-item" id="heuristics">
             <p>
             session 3: <strong>HEURISTICS</strong><br />
 Saturday, March 27, 9:30-11:30 EST (ZOOM)<br />
@@ -139,7 +141,7 @@ Design Academy Eindhoven
 </p>
         </div>
 
-        <div class="grid-item">
+        <div class="grid-item" id="geographies">
             <p>
             session 4:  <strong>GEOGRAPHIIES</strong><br />
 Saturday, March 27, 12:00-14:00 EST (ZOOM)<br />
@@ -160,7 +162,14 @@ California College of Art
                 and research assistance from Farah Michel. </h4>
         </div>
     <div class="grid-item bg bg3"></div>
-    <div class="grid-item"></div>
+    <div class="grid-item" id="contact">
+
+        <p>Please contact Jesse LeCavalier with questions or requests.
+
+ 
+
+            <a href="mailto:jesse.lecavalier@daniels.utoronto.ca">jesse.lecavalier@daniels.utoronto.ca</a></p>
+    </div>
 <!-- 
 
         <div class="grid-item"></div>
@@ -175,7 +184,16 @@ California College of Art
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.js"></script>
+    <script>
+        $("#menu a").click(function(e){
+            e.preventDefault();
+            destination = $(this).attr("href")
+            $(document).scrollTo(destination,{
+                duration:400
+            })
+        })
+    </script>
 
 
 </body>
