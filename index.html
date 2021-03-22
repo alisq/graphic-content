@@ -97,18 +97,25 @@
             session 1: <strong>POLITICAL ECONOMIES</strong><br />
 Friday, March 26, 12:00–14:00 EST (ZOOM)<br />
 <br />
-<span class="name">Deane Simpson</span> <br />
+<span class="name" data-session="#session-1" data-bio="Deane Simpson is professor of architecture, urbanism and urban planning at the Royal Danish Academy, Copenhagen where he leads the masters program Urbanism and Societal Change. Educated at Columbia University and ETH Zürich, he previously practiced with Diller + Scofidio; and taught at the AA London, BAS, and the ETH. His research addresses contemporary urban and architectural conditions, exploring themes such as: the spatial transformations of Nordic welfare systems; social and environmental sustainability within urban and regional settings; the urban implications of demographic transformation; and problems related to the securitization of public space. Common to this work is the analytical and communicative role drawing plays. He is author of <em>Young-Old: Urban Utopias of an Aging Society</em> (2015); and co-editor of <em>The City between Freedom and Security</em> (2017); <em>Forming Welfare</em> (2017); and <em>Atlas of the Copenhagens</em> (2018).">Deane Simpson</span> <br />
 KADK Royal Danish Academy of Fine Art<br />
 <br />
-<span class="name">Charlotte Malterre-Barthes</span> <br />
+<span class="name" data-session="#session-1" data-bio="Malterre-Barthes is an architect, urban designer, and Assistant Professor of Urban Design at Harvard Graduate School of Design. Principal of the urban design agency OMNIBUS, she directed the MAS Urban Design at the Chair of Marc Angélil until 2019 and holds a PhD from ETHZ on the effects of the political economy of commodities on the built environment, case study Egypt. She co-authored <em>Eileen Gray: A House under the Sun</em> (Nobrow),  <em>Some Haunted Spaces in Singapore</em> (Edition Patrick Frey) and <em>Housing Cairo: The <s>Informal</s> Response</em> (Ruby Press). She is a founding member of the Parity Group and Parity Front, networks dedicated to improving equity in architecture. ">Charlotte Malterre-Barthes</span> <br />
 Harvard University Graduate School of Design<br />
 <br />
-<span class="name">Jesse LeCavalier</span> (Respondent)<br />
+<span class="name" data-session="#session-1" data-bio="Jesse LeCavalier is a designer, writer, and educator whose work explores the architectural and urban implications of contemporary logistics. He is the author of <em>The Rule of Logistics: Walmart and the Architecture of Fulfillment</em> (University of Minnesota Press, 2016).<br ><br />He is associate professor of architecture at the Daniels Faculty of Architecture at the University of Toronto and was recently the Daniel Rose Visiting Assistant Professor at the Yale School of Architecture. ">Jesse LeCavalier</span> (Respondent)<br />
 Daniels Faculty, University of Toronto
 </p>
 
         </div>
-        <div class="grid-item grid-height-2 bg bg2"></div>
+
+        
+        <div class="grid-item  grid-span-2-end grid-height-2 bg bg2" id="session-1">
+           
+        </div>
+        
+        <div class="grid-item  grid-span-2-start grid-height-2 bg bg5"></div>
+        
         <div class="grid-item" id="agencies">
             <p>
             session 2: <strong>AGENCIES</strong><br />
@@ -124,7 +131,7 @@ University of Warwick<br />
 University of Melbourne
 </p>
         </div>
-        <div class="grid-item grid-height-2 bg bg6"></div>
+        
         <div class="grid-item" id="heuristics">
             <p>
             session 3: <strong>HEURISTICS</strong><br />
@@ -141,6 +148,8 @@ Design Academy Eindhoven
 </p>
         </div>
 
+        <div class="grid-item grid-span-2-end grid-height-2 bg bg6"></div>
+        <div class="grid-item grid-span-2-start grid-height-2 bg bg2"></div>
         <div class="grid-item" id="geographies">
             <p>
             session 4:  <strong>GEOGRAPHIIES</strong><br />
@@ -152,7 +161,7 @@ Delft University of Technology<br />
 <span class="name">Ghazal Jafari</span><br />
 University of Virginia<br />
 <br />
-<span class="name"></span>Janette Kim</span> (Respondent) <br />
+<span class="name">Janette Kim</span> (Respondent) <br />
 California College of Art
 </p>
         </div>
@@ -193,6 +202,17 @@ California College of Art
                 duration:400
             })
         })
+
+
+        $(".name").hover(function(){
+            
+            $("<div class='bio'></div>")
+                .html("<p>"+$(this).data("bio")+"</p>")
+                .appendTo( $(this).data("session") )
+            }, function() {
+            $( $(this).data("session") ).empty();
+        }
+            );
     </script>
 
 

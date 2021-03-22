@@ -56,7 +56,9 @@ h5 {
 
 .name {
   font-family: bluu;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  cursor: pointer;
+  border-bottom: 2px solid #FF00FF; }
 
 p {
   padding: 2rem; }
@@ -113,6 +115,11 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 10; }
+
+.bio {
+  background: #FFF;
+  height: 100%;
+  width: 100%; }
 
 * {
   box-sizing: border-box;
