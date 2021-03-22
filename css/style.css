@@ -64,6 +64,8 @@ p {
   padding: 2rem; }
 
 @media (max-width: 1000px) {
+  .name {
+    border-bottom: none; }
   #menu {
     font-size: 1rem; }
   h1 {
