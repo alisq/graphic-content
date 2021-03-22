@@ -61,7 +61,13 @@ h5 {
   border-bottom: 2px solid #FF00FF; }
 
 p {
-  padding: 2rem; }
+  padding: 0.5rem 1rem; }
+
+p:first-child {
+  margin-top: 0.5rem; }
+
+p:last-child {
+  margin-bottom: 0.5rem; }
 
 @media (max-width: 1000px) {
   .name {
