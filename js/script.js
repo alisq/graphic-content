@@ -16,6 +16,8 @@ $("#menu a").click(function(e){
 
 
 $(".name").hover(function(){
+  $(".active").removeClass("active")
+  $(this).addClass("active")
   $(".bio").remove();
   $("<div class='bio'></div>")
       .html("<p>"+$(this).data("bio")+"</p>")
@@ -28,4 +30,5 @@ $(".name").hover(function(){
 
   $(document).on("mouseout",".bio",function(){
       $(this).remove();
+      $(".active").removeClass("active")
   })

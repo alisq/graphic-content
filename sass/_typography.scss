@@ -92,6 +92,22 @@ h1, h2, h3, h4 {
       border-bottom:2px solid #FF00FF;
  }
 
+
+ .name.active { color:#FF00FF; border-color:#000}
+
+
+ .name.active::after,
+ .name.active::before {
+      font-size:0.7em;
+ }
+ 
+ #poltical_economies .name.active::after,
+ #heuristics .name.active::after { content:' \2192' }
+
+
+ #agencies .name.active::before,
+ #geographies .name.active::before { content:' \2190' }
+
  p {
       padding:0.5rem 1rem;
  }
