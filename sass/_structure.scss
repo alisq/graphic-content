@@ -20,6 +20,13 @@
     
 }
 
+#geographies,
+#political_economies,
+#heuristics,
+#agencies {
+    align-items:flex-start;
+}
+
 #menu {
     height:5vw;    
     position:fixed;
