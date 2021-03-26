@@ -122,6 +122,11 @@ h1, h2, h3, h4 {
 
  @media (max-width:1000px) {
 
+
+     body {
+          font-size:18px
+     }
+
      .name {
           border-bottom:none
      }
@@ -131,7 +136,7 @@ h1, h2, h3, h4 {
      }
 
      h1 {
-          font-size:8rem
+          font-size:4rem
      }
 
      h4 {
@@ -145,4 +150,13 @@ h1, h2, h3, h4 {
      h4 br {
           display:inline;
      }
+
+     .name.active { color:#000; border:none;}
+
+     #poltical_economies .name.active::after,
+     #heuristics .name.active::after { content:' ' }
+    
+    
+     #agencies .name.active::before,
+     #geographies .name.active::before { content:' ' }
  }

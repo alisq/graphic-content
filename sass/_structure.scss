@@ -92,7 +92,27 @@
 }
 
 @media (max-width:1000px) {
-    #grid { display:block }
+
+    #menu {
+        position:static;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        height:auto;
+   }
+
+   #menu a {
+       text-align:center;
+       display:block;
+       width:50%;
+       
+       padding:0.5em
+   }
+
+
+    #grid { 
+        display:block;
+        margin-top:0
+     }
     .grid-item { 
         display:block;
         min-height:0;
